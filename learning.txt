@@ -1,0 +1,3 @@
+# How to start
+$ cd db-cli && go install db-cli
+$ ./db_cli -h
