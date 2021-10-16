@@ -36,7 +36,7 @@ var USERNAME string
 var rootCmd = &cobra.Command{
 	Use:   "db-cli",
 	Short: "A brief description of your application",
-	Long:  `db-cli helps to import export data for multiple databases like postgresql, mysql and mongodb`,
+	Long:  `A cli which can interact with all databases`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	Run: func(cmd *cobra.Command, args []string) {
@@ -61,12 +61,6 @@ func init() {
 	// Command options
 	rootCmd.PersistentFlags().StringVar(&DBNAME, "dbname", "dn", "DB Name like Mysql, Postgresql, MongoDB (required)")
 	rootCmd.MarkPersistentFlagRequired("dbname")
-
-	rootCmd.PersistentFlags().StringVar(&HOST, "host", "h", "Host Address Like 127.0.0.1, 34.36.39.140 or some domain name (required)")
-	rootCmd.MarkPersistentFlagRequired("host")
-
-	rootCmd.PersistentFlags().StringVar(&HOST, "host", "h", "Host Address Like 127.0.0.1, 34.36.39.140 or some domain name (required)")
-	rootCmd.MarkPersistentFlagRequired("host")
 }
 
 // initConfig reads in config file and ENV variables if set.

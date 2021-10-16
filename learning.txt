@@ -1,15 +1,3 @@
-Steps:
-$ mkdir db-cli && cd db-cli
-$ go get github.com/spf13/cobra/cobra
-If you encounter the error as follows
-"zsh: command not found: cobra"
-$ nano/vi ~/.zshrc and add following line
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-source ~/.zshrc
-$ mkdir db-cli && cd db-cli
-$ cobra init --pkg-name=db-cli
-$ go mod init db-cli
-$ go mod tidy # to generate go.sum
-$ go install
-### Execute db-cli and get things
-$ db-cli
+# How to start
+$ cd db-cli && go install db-cli
+$ ./db_cli -h
